@@ -1,0 +1,4 @@
+definition user {
+  relation friend: user
+  permission view = friend
+}
