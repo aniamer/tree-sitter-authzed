@@ -3,7 +3,7 @@ $(error Windows is not supported)
 endif
 
 LANGUAGE_NAME := tree-sitter-authzed
-HOMEPAGE_URL := https://github.com/aniamer/tree-sitter-authzed-gen
+HOMEPAGE_URL := https://github.com/aniamer/tree-sitter-authzed
 VERSION := 0.1.0
 
 # repository

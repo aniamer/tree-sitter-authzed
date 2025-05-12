@@ -6,9 +6,7 @@
       "camelcase": "AuthZed",
       "title": "authzed-parser",
       "scope": "source.authzed",
-      "file-types": [
-        "authzed"
-      ],
+      "file-types": ["zed"],
       "injection-regex": "^authzed$",
       "class-name": "TreeSitterAuthzed"
     }
@@ -24,7 +22,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-authzed"
+      "repository": "https://github.com/aniamer/tree-sitter-authzed"
     }
   },
   "bindings": {
