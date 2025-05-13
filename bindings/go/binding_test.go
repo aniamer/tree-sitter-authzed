@@ -22,17 +22,20 @@ func TestCanLoadGrammar(t *testing.T) {
 	}
 
 	fmt.Printf("languge %v", language.Version())
-	parser.SetLanguage(language)
+	err := parser.SetLanguage(language)
+	if err != nil {
+		t.Error(err)
+	}
 	tree := parser.Parse([]byte(`
 		definition user {
 			relation friend: user
 			permission view = friend
-    		}`), nil)
+	}`), nil)
 
 	if tree == nil {
 		t.Error("Couldn't parse schema")
 	}
 	defer tree.Close()
-	// root := tree.RootNode()
-	// fmt.Println(root.ToSexp())
+	root := tree.RootNode()
+	fmt.Println(root.ToSexp())
 }
