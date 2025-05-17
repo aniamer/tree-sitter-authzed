@@ -1,3 +1,4 @@
+
 module.exports = grammar({
   name: "authzed",
 
