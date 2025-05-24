@@ -38,7 +38,7 @@ func TestCanLoadGrammar(t *testing.T) {
 	rootNode := tree.RootNode()
 	fmt.Printf("%s\n", rootNode.ToSexp())
 
-	query, query_err := tree_sitter.NewQuery(language, `((definition) @identifier)`)
+	query, query_err := tree_sitter.NewQuery(language, `(relation (identifier) @type)`)
 	if query_err != nil {
 		t.Error(err)
 	}

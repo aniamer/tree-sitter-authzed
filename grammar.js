@@ -1,4 +1,3 @@
-
 module.exports = grammar({
   name: "authzed",
 
@@ -14,7 +13,7 @@ module.exports = grammar({
 
     permission: ($) => seq("permission", $.identifier, "=", $.expression),
 
-    type: ($) => seq($.identifier, optional(seq("from", $.identifier))),
+    type: ($) => $.identifier,
 
     expression: ($) =>
       choice($.identifier, seq($.identifier, ".", $.identifier)),
